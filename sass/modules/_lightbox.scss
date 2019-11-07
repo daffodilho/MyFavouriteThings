@@ -1,9 +1,7 @@
 .lightbox { 
     display: none;
-    // display: flex;
     flex-direction: row;
-    flex-flow: row wrap;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
@@ -12,14 +10,14 @@
     background-color: rgba(0, 0, 0, 0.9);
 
     .sidebar {
-        flex: 1;
+        width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     .lb-content {
-        flex: 1;
+        width: 50%;
         font-family: 'Inconsolata', monospace;
         color: $white;
         display: flex;
@@ -61,3 +59,42 @@
 }
 
 .show-lb { display: flex !important; }
+
+@media screen and (max-width: 768px){
+    .lightbox{
+        flex-direction: column;
+        padding-top: 50px;
+
+        .sidebar { width: 100%; }
+
+        .lb-content{
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding-right: 0px;
+            padding-top: 30px;
+            h2 { font-size: 2em; }
+            p { font-size: 1em; line-height: 1em; }
+        } 
+
+        img { 
+            width: 40%;
+            transform: rotate(0);
+            -webkit-transform: rotate(0);
+            -moz-transform: rotate(0);
+            -ms-transform: rotate(0);
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .lightbox .lb-content{
+        padding-right: 0px;
+        h2 { font-size: 1em; }
+        p { font-size: 0.8em; line-height: 1em; }
+    }
+
+    .lightbox img{
+        width: 30%;
+    }
+}

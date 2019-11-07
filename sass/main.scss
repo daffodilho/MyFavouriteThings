@@ -4,7 +4,9 @@
 @import 'modules/lightbox';
 @import 'modules/footer';
 
+@import 'modules/error';
+
 body {
     background-color: $white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
