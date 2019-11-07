@@ -13,8 +13,8 @@ header {
     h2{
         font-size: 1em;
         color: $black;
-
     }
+
     nav ul li{
         display: inline;
         padding: 0 30px;
@@ -25,6 +25,21 @@ header {
             color: $black;
         }
     }
-    
-    
+}
+
+@media screen and (max-width: 768px){
+    header{
+        height: 16vh;
+        h1 { font-size: 2em; }
+        h2 { font-size: 1em; }
+
+    } 
+}
+
+@media screen and (max-width: 320px){
+    header{
+        height: 14vh;
+        h1 { font-size: 1em;}
+        h2 { font-size: 0.5em;}
+    }
 }

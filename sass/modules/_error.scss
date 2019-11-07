@@ -1,0 +1,32 @@
+.error {
+    height: 100vh;
+    background-color: $white;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    margin-top: 200px;
+    animation: appear 3s 1;
+}
+
+@keyframes appear {
+    0% { width: 0;}
+    100% { width: 100%;}
+}
+
+pre{
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: $main;
+}
